@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensibilisation & Communauté</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="m-0 p-0 bg-gray-100 text-xl">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md px-5 flex justify-between items-center sticky top-0 z-5">
+        <a href="../index.html">
+            <img src="../IMAGES/logoVitaCare.png" alt="" width="120" height="100">
+        </a>
+        <div class="md:hidden">
+            <p id="menu-icon" class="md:hidden "><i class="fa-solid fa-bars fa-xl" style="color: #2ec27e;"></i></p>
+        </div>
+
+        <nav class="hidden md:inline-block">
+            <ul class="flex space-x-5 md:flex">
+                <li><a href="../index.html" class="hover:text-green-700">Accueil</a></li>
+                <li><a href="../index.html#about" class="hover:text-green-700">A Propos</a></li>
+                <li><a href="../index.html#services" class="hover:text-green-700">Services</a></li>
+                <li><a href="../index.html#contact" class="hover:text-green-700">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="space-y-3 hidden md:flex">
+            <button
+                class="bg-white text-green-600 text-lg py-4 px-8 rounded-full shadow-md hover:shadow-lg transition duration-300 mt-5">
+                <a href="../IMAGES/VitaCare Code QR.png">
+                    <i class="fa-brands fa-whatsapp" style="color: #26a269;"></i> Démarrer sur WhatsApp
+                </a>
+            </button>
+        </div>
+    </header>
+
+    <div class="flex items-center justify-center h-auto p-8">
+        <h1 class="text-4xl font-bold text-center text-green-700">Contrôlez votre diabète pour protéger votre avenir !
+        </h1>
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="relative w-full h-96 overflow-hidden mb-8 mx-auto">
+        <div class="absolute w-full h-full transition-transform duration-500 ease-in-out opacity-100"
+            data-carousel-item="active">
+            <img src="https://cdn.pixabay.com/photo/2014/11/12/19/25/diabetes-528678_1280.jpg"
+                class="absolute block w-full h-full object-cover top-0 left-0 md:h-full w-full" alt="diabetes image">
+        </div>
+        <div class="absolute w-full h-full transition-transform duration-500 ease-in-out opacity-0" data-carousel-item>
+            <img src="../IMAGES/WhatsApp Image 2025-03-13 at 10.36.48.jpeg"
+                class="absolute block w-full h-96 object-cover top-0 left-0 md:h-full w-full" alt="Diabetes image">
+        </div>
+    </div>
+
+    <!-- Carousel Script -->
+    <script>
+        const carousel = document.querySelector('.relative');
+        const items = carousel.querySelectorAll('[data-carousel-item]');
+        let activeItem = carousel.querySelector('[data-carousel-item="active"]');
+
+        setInterval(() => {
+            let nextItem = activeItem.nextElementSibling;
+            if (!nextItem) {
+                nextItem = items[0];
+            }
+
+            activeItem.classList.remove('opacity-100');
+            activeItem.classList.add('opacity-0');
+
+            nextItem.classList.remove('opacity-0');
+            nextItem.classList.add('opacity-100');
+
+            activeItem.removeAttribute('data-carousel-item');
+            nextItem.setAttribute('data-carousel-item', 'active');
+            activeItem = nextItem;
+        }, 3000);
+    </script>
+    <!--information-->
+    <section id="sensibilisation" class="p-8 bg-white text-center">
+        <h2 class="section-header  text-green-700 text-2xl font-semibold mb-8">INFORMATION SUR LA MALADIE</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="section-card bg-white p-4 rounded-lg shadow-lg">
+                <div>
+                    <img src="../IMAGES/WhatsApp Image 2025-03-13 at 10.43.43.jpeg" alt="Diabetes Type 2"
+                        class="w-72 h-56 mb-4 mx-auto">
+                </div>
+                <h2 class="text-xl font-semibold text-orange-500 mb-2">Diabète de type 2</h2>
+                <p class="text-black-500 mb-2">Le diabète de type 2 modifie la façon dont l’organisme utilise le
+                    sucre (glucose) comme source d’énergie. Il empêche l’organisme d’utiliser correctement l’insuline,
+                    ce qui peut entraîner une forte glycémie s’il n’est pas traité.</p>
+                <p class="text-gray-600  font-bold">En savoir plus :</p>
+                <a href="https://youtu.be/4qemnYlEzaI?si=j7zOgMcanZ1EJHBu" class="text-green-500 hover:underline">Voir
+                    vidéo YouTube</a>
+            </article>
+            <article class="section-card bg-white p-4 rounded-lg shadow-lg">
+                <div>
+                    <img src="https://i.pinimg.com/736x/7d/b5/d7/7db5d7d8b2236727735d5be6920eb0e2.jpg" alt="Doctor"
+                        class="w-72 h-56 mb-4 mx-auto">
+                </div>
+                <div class="text-center">
+                    <h2 class="text-xl font-bold text-orange-500 mb-2">Pourquoi suivre les recommandations du médecin ?
+                    </h2>
+                    <p class="text-black-500">Pour éviter des pics de glycémie</p>
+                    <p class="text-black-500">Pour éviter les insuffisances rénales</p>
+                    <p class="text-black-500 mb-2">Pour mieux vivre et être en bonne santé</p>
+                    <div class="w-full text-center">
+                        <p class="text-gray-600  font-bold">En savoir plus :</p>
+                        <a href="https://youtu.be/FAibZlGg0GY?si=fYM_aArWVwmTqkHt" target="_blank"
+                            class="text-green-500 hover:underline">Regarder la vidéo</a>
+                    </div>
+                </div>
+            </article>
+            <article class="section-card bg-white p-4 rounded-lg shadow-lg">
+                <div class="w-full h-56  mb-4 ">
+                    <iframe class="w-full h-full mx-auto rounded-lg"
+                        src="https://www.youtube.com/embed/lXjGM6C3tN8?si=CChekknfB5AX9JsT"
+                        title="Diabetes Symptoms Video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-orange-500 mb-2"> LES SYMPTOMES</h2>
+                    <h class="text-black-500">Faim excessive (polyphagie),Cicatrisation lente des plaies.</h>
+                    <p class="text-black-500"> Perte de poids inexpliquée (surtout pour le type 1)</p>
+                    <p class="text-black-500 mb-2"> Infections fréquentes (cutanées, urinaires, buccales)</p>
+                    <p class="text-gray-600  font-bold">En savoir plus :</p>
+                    <a href="https://www.youtube.com/embed/lXjGM6C3tN8?si=CChekknfB5AX9JsT" target="_blank"
+                        class="text-green-500 hover:underline">Regarder la vidéo</a>
+                </div>
+
+            </article>
+        </div>
+    </section>
+    <!--communauté-->
+    <section id="sensibilisation" class="p-8 bg-white text-center">
+        <h2 class="section-header text-2xl  text-green-700 font-semibold mb-8">NOTRE COMMUNAUTÉ</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+            <article class="section-card bg-white p-4 rounded-lg shadow-lg">
+                <div>
+                    <img src="../IMAGES/WhatsApp Image 2025-03-13 at 10.36.47.jpeg" alt="Community Event"
+                        class="w-72 h-56 mb-4 mx-auto">
+                </div>
+                <div class="text-center">
+                    <h2 class="text-xl font-bold text-orange-500 mb-2">Vivre ensemble, c'est possible avec le diabète
+                    </h2>
+                    <p class="text-black-500">Le diabète ne doit pas être un frein à une vie épanouie.</p>
+                    <p class="text-black-500 mb-4">Avec du soutien et de la bienveillance, chacun peut avancer
+                        sereinement.</p>
+                    <button
+                        class="bg-white text-green-600 text-lg py-4 px-8 rounded-full shadow-md hover:shadow-lg transition duration-300 mt-5">
+                        <a href="https://wa.me/message/BIVDHUO4NN3IH1">
+                            Rejoindre <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </button>
+            </article>
+            <article class="section-card bg-white p-4 rounded-lg shadow-lg">
+                <div>
+                    <img src="../IMAGES/WhatsApp Image 2025-03-13 at 10.36.46.jpeg" alt="WhatsApp Group"
+                        class="w-72 h-56 mb-4 mx-auto">
+                </div>
+                <div class="text-center">
+                    <h2 class="text-xl font-bold text-orange-500 mb-2">Chaque geste compte : soutenez la lutte contre le
+                        diabète</h2>
+                    <p class="text-black-500">Votre aide peut transformer des vies.</p>
+                    <p class="text-black-500 mb-2">Ensemble, apportons espoir et bien-être aux personnes diabétiques.
+                    </p>
+                    <button
+                        class="bg-white text-green-600 text-lg py-4 px-8 rounded-full shadow-md hover:shadow-lg transition duration-300 mt-5">
+                        <a href="https://wa.me/message/BIVDHUO4NN3IH1">
+                            <i class="fa-solid fa-hand-holding-heart mr-2"></i>Faire un don
+                        </a>
+                    </button>
+                </div>
+
+        </div>
+    </section>
+    <!-- Awareness Section -->
+    <section id="sensibilisation" class="p-8 bg-white text-center">
+        <h2 class="section-header text-2xl  text-green-700 font-semibold mb-8">CONSEILS A SUIVRE</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="section-card bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="font-semibold text-lg text-orange-500">L'importance de l'exercice physique</h3>
+                <p>Un mode de vie actif peut prévenir le diabète et l'hypertension.</p>
+                <img src="https://i.pinimg.com/474x/48/f3/8c/48f38ce9c4b01b2f3c22c06e3f1a14cc.jpg"
+                    alt="Exercice physique" class="w-full h-64 mt-2 rounded object-cover">
+            </article>
+            <article class="section-card bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="font-semibold text-lg text-orange-500">Alimentation et santé</h3>
+                <p>Consommer des aliments sains est essentiel pour gérer la glycémie.</p>
+                <img src="https://i.pinimg.com/474x/eb/cb/21/ebcb218aa81630f316150cb1a43637a6.jpg" alt="Alimentation"
+                    class="w-full h-64 mt-2 rounded object-cover">
+            </article>
+            <article class="section-card bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="font-semibold text-lg text-orange-500">L'importance du sommeil</h3>
+                <p>Le sommeil est crucial pour la gestion du stress et de la santé générale.</p>
+                <img src="https://i.pinimg.com/474x/89/88/8a/89888a2af6d1cb1bd3a82ed800f09152.jpg" alt="Sommeil"
+                    class="w-full h-64 mt-2 rounded object-cover">
+            </article>
+
+        </div>
+    </section>
+    <footer class="bg-gray-600 text-white text-center py-4 mt-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div>
+                    <h4 class="text-lg font-semibold">Contact</h4>
+                    <p class="mt-2">📍 11 BP 292 Abidjan, Côte d'Ivoire</p>
+                    <p>📞 +225 01 02 03 04 05</p>
+                    <p>✉ contact@vitacare.com</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold">Liens rapides</h4>
+                    <ul class="mt-2 space-y-2">
+                        <li><a href="../index.html#services" class="hover:underline">Nos Services</a></li>
+                        <li><a href="../index.html#about" class="hover:underline">À propos</a></li>
+                        <li><a href="../index.html#contact" class="hover:underline">Contact</a></li>
+                        <li><a href="../index.html#temoignages" class="hover:underline">Témoignages</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold">Suivez-nous</h4>
+                    <div class="flex justify-center space-x-4 mt-2">
+                        <a href="#" class="text-blue-500 text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-blue-600 text-2xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-6 text-sm">&copy; 2025 VitaCare. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <div id="menu" class="bg-orange-500 fixed w-auto top-0 right-0 z-30 h-12/11 p-2 hidden">
+        <div class="flex justify-end ">
+            <button id="close"><i class="fa-solid fa-xmark fa-xl" style="color: #02a518ad;"></i></button>
+        </div>
+
+        <nav class="text-white text-2xl p-2 sticky right-0 z-50">
+            <ul class="space-y-2">
+                <li><a href="../index.html" class="hover:text-green-700">Accueil</a></li>
+                <li><a href="../index.html#about" class="hover:text-green-700">A Propos</a></li>
+                <li><a href="../index.html#services" class="hover:text-green-700">Services</a></li>
+                <li><a href="../index.html#contact" class="hover:text-green-700">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="table-fixed md:flex gap-3 px-1">
+            <button
+                class="bg-white text-green-600 text-lg py-4 px-8 rounded-full shadow-md hover:shadow-lg transition duration-300 mt-5">
+                <a href="../IMAGES/VitaCare Code QR.png">
+                    <i class="fa-brands fa-whatsapp" style="color: #26a269;"></i> Démarrer sur WhatsApp
+                </a>
+            </button>
+        </div>
+    </div>
+    <script src="./../JS/menu.js"></script>
+
+
+</body>
+
+</html>
