@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     closeButton.addEventListener('click', function() {
         menu.classList.add('hidden'); // Cache le menu
         menu.classList.remove('fixed', 'top-0', 'right-0', 'w-auto'); // retire les classes de fixation
-        menu.classList.add('absolute', 'w-auto', 'top-0', 'right-0'); // remet les classes de positionnement initial
+        menu.classList.add('fixed', 'w-auto', 'top-0', 'right-0'); // remet les classes de positionnement initial
         closeButton.style.display = 'block'; // affiche le bouton close
     });
 });
